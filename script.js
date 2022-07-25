@@ -40,6 +40,10 @@ function writePassword() {
   if(inputSpecial) {
     passwordText += special;
   }
+  if (inputLowerCase + inputUpperCase + inputNumber + inputSpecial < 1) {
+    alert("You must pick at least one parameter for your new password.");
+    return "";
+  }
   for (var i = 0; i <inputLength; i++) {
     password = passwordText [Math.floor(Math.random() * passwordText.length)];
   }
